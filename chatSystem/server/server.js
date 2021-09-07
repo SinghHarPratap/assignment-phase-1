@@ -28,7 +28,7 @@ MongoClient.connect(
     if (err) {
       return console.log(err)
     }
-    const dbName = 'chatSystemDatabase'
+    const dbName = 'mydb'
     const db = client.db(dbName)
     sockets.connect(app, io)
     require('./routes/login.js')(db, app)

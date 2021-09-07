@@ -1,19 +1,18 @@
 <h3>
   List of Users
 </h3>
-<div>
-  <ul *ngFor="let item of usersObjects">
-    <li>Name:{{ item.username }}</li>
+<div class="userl" data-aos="fade-left">
+  <ul *ngFor="let item of usersObjects" class="user-list card">
+    <li>Name:   {{ item.username }}</li>
     <span class="btn btn-primary" [routerLink]="['/update', item._id]">
-      <i class="fa fa-spinner"></i> Edit</span
+      <i class="fa fa-edit"></i> Edit
+    </span
     >
-    &nbsp;
     <span class="btn btn-primary" (click)="deleteproduct(item._id)"
       ><i class="fa fa-trash"></i> Delete</span
     >
-    &nbsp;
     <span class="btn btn-primary" [routerLink]="['/addgroup', item._id]">
-      <i class="fa fa-spinner"></i> Add Group</span
+      <i class="fa fa-plus"></i> Group</span
     >
   </ul>
 </div>
@@ -24,10 +23,10 @@
 <h3>
   List of Groups
 </h3>
-<div>
+<div class="card log" data-aos="fade-right">
   <ul *ngFor="let item of groupObjects">
-    <li>Name:{{ item.group_name }}</li>
-    <li>Members:{{ item.members }}</li>
+    <li>Name:   {{ item.group_name }}</li>
+    <li>Members:   {{ item.members }}</li>
     <span class="btn btn-primary" (click)="deletegroup(item._id)"
       ><i class="fa fa-trash"></i> Delete</span
     >
@@ -37,19 +36,19 @@
     >
     &nbsp;
     <span class="btn btn-primary" [routerLink]="['/createChannel', item._id]">
-      <i class="fa fa-spinner"></i> Create Channel</span
+      <i class="fa fa-plus"></i> Create Channel</span
     >
     &nbsp;
     <span class="btn btn-primary" [routerLink]="['/deleteChannel', item._id]">
-      <i class="fa fa-spinner"></i> Delete Channel</span
+      <i class="fa fa-trash"></i> Delete Channel</span
     >
     &nbsp;
     <span class="btn btn-primary" [routerLink]="['/addChannelMember', item._id]">
-      <i class="fa fa-spinner"></i> Add Channel Members</span
+      <i class="fa fa-plus"></i> Add Channel Members</span
     >
     &nbsp;
     <span class="btn btn-primary" [routerLink]="['/deleteChannelMember', item._id]">
-      <i class="fa fa-spinner"></i> Delete Channel Memebers</span
+      <i class="fa fa-trash"></i> Delete Channel Memebers</span
     >
   </ul>
 </div>

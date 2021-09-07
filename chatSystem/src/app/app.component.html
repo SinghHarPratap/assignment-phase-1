@@ -1,16 +1,28 @@
 <nav class="navbar navbar-default" class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
+  <div class="container">
     <ul class="nav navbar-nav ">
-      <li class="active"><a class="nav-link" routerLink="/" class="navbar-brand">Home</a></li>
-      <li><a class="nav-link" routerLink="/login" class="navbar-brand">Log in</a></li>
-      <li><a class="nav-link" routerLink="/account" class="navbar-brand">Account</a></li>
-      <li><a class="nav-link" routerLink="/userslist" class="navbar-brand">List</a></li>
-      <li>
-        <a class="nav-link" routerLink="/login" (click)="logout()" class="navbar-brand">Log out</a>
-      </li>
+      <div>
+        <li class="active"><a class="nav-link" routerLink="/" class="navbar-brand">
+          <img src="https://www.vippng.com/png/full/410-4100150_livechat-logo-png-live-chat.png" alt="">
+        </a></li>
+      </div>
+
+      <div class="side-nav">
+        <li><a class="nav-link" routerLink="/login" class="navbar-brand">Log in</a></li>
+        <li><a class="nav-link" routerLink="/account" class="navbar-brand">Account</a></li>
+        <li><a class="nav-link" routerLink="/userslist" class="navbar-brand">List</a></li>
+        <li>
+          <a class="nav-link" routerLink="/login" (click)="logout()" class="navbar-brand">Log out</a>
+        </li>
+      </div>
     </ul>
   </div>
 </nav>
+
+<div class="banner">
+  <img src="https://wallpapersflix.com/cool/wp-content/uploads/2020/10/Cool-Background-For-Laptop.jpg" alt="Snow" style="width:100%;">
+    <div class="centered">Chat App by Harry</div>
+</div>
 <div class="container">
   <router-outlet></router-outlet>
 </div>

@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "mongodb": "^3.3.2",
+    "mongodb": "^3.7.0",
     "o": "^2.1.1",
     "socket.io": "^2.3.0"
   },

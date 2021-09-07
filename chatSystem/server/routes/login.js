@@ -8,6 +8,7 @@ module.exports = function(db, app) {
     username = req.body.username
     password = req.body.pwd
     const collection = db.collection('users')
+    console.log(username,password);
     //check for duplicate id's
     collection.find({ username: username, pwd: password }).count(function(err, count) {
       if (count > 0) {

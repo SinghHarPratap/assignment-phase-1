@@ -1,1 +1,152 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: fantasy;
+    background: #f2f2f2;
+}
+
+button, .btn {
+    background: #f2f2f2 !important;
+    color: black !important;
+    border: 1px solid lightgray !important;
+}
+
+.banner img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.banner .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+nav img {
+    width: 100px;
+}
+
+.side-nav {
+    display: flex;
+}
+
+.side-nav li {
+    margin: 0 0.5rem;
+}
+
+.join {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 7rem;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card {
+    display: block;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.new-room input {
+    margin: 1rem 0;
+}
+
+.join button {
+    width: 150px;
+    margin-right: 3rem;
+}
+
+.join select {
+    width: 200px;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+}
+
+.room-notice {
+    margin: 7rem 0;
+}
+
+.chat {
+    margin: 4rem 0 0;
+}
+
+
+h3 {
+    margin: 7rem 0 3rem;
+}
+
+.wrapper {
+    margin: 7rem;
+}
+
+#formContent, .new-user {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#formContent form {
+    width: 100%;
+}
+
+#formContent h4 {
+    margin-bottom: 1rem;
+}
+
+.space {
+    margin: 7rem 0;
+}
+
+.new-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+}
+
+.user-list i, .user-list span {
+    margin-right: 0.25rem;
+}
+
+.user-list li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.userl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.userl ul {
+    width: 31%;
+    margin-bottom: 2rem;
+}
+
+.log li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.log {
+    margin-bottom: 7rem;
+}
