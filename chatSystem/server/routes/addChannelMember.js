@@ -7,7 +7,7 @@ module.exports = function(db, app, ObjectID) {
     const collection = db.collection('groups')
     //check for duplicate id's
     collection.findOneAndUpdate(
-      { group_name: req.body.group_name, 'channel.channel_name': req.body.channel_name },
+      { group_name: req.body.group_name, 'channel.channel_name': req.body.channel_name },  
       { $addToSet: { 'channel.$.channel_members': req.body.channel_member } }
     )
     //check for duplicate id's

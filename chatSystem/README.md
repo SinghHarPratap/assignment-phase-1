@@ -2,26 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
-## Development server
+## Git Layout
+ Chatsystem Consist of mainly three folders namely: node modules, server and src. "node_modules" is autmatically generated which consist of all the required node modules. Sever fold consist of server side code which involves routes,server.js and socket.js. Whereas, src holds the angular code which basically a client side code.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ ## Data Structures
+ Data Structures are a specialized means of organizing and storing data in computers in such a way that we can perform operations on the stored data more efficiently. In this given code we mainly two data structure namely group data structure and group data structure. In user data structure we have different fields od data like 
+ objid, id, group_name, members, channel, channelname. The code snippet given below portrays the data structure.
 
-## Code scaffolding
+ <img src="images/data_structuture_user" width="100">
+ <img src="images/data_structuture_group" width="100">
+ 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
