@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  Data Structures are a specialized means of organizing and storing data in computers in such a way that we can perform operations on the stored data more efficiently. In this given code we mainly two data structure namely group data structure and group data structure. In user data structure we have different fields od data like 
  objid, id, group_name, members, channel, channelname. The code snippet given below portrays the data structure.
 
- <img src="images/images/data_structure_group.JPG" width="100">
- <img src="images/images/data_structure_group.JPG" width="100">
+ <img src="images/data_structure_group.JPG" width="100">
+ <img src="images/data_structure_user.JPG" width="100">
  
 
