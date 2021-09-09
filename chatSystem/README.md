@@ -77,7 +77,7 @@ Route parameters are named URL segments that are used to capture the values spec
 
 "object id"show in the snippet below is the parameter to the routes, it might be the object id for user, usergroup, channel or any other class.
 
-<img src="images/Routes.JPG" width="200">
+<img src="images/parameters.JPG" width="200">
 
 ### Return Values
 
