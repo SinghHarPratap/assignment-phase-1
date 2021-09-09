@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
 ## Git Layout
- Chatsystem Consists of mainly three folders namely: node modules, server and src. "node_modules" is autmatically generated which consist of all the required node modules. Sever fold consist of server side code which involves routes,server.js and socket.js. Whereas, src holds the angular code which basically a client side code.
+ Chatsystem Consists of mainly three folders namely: node modules, server and src. "node_modules" is automatically generated which consists of all the required node modules. Sever fold consists of server side code which involves routes,server.js and socket.js. Whereas, src holds the angular code which is basically a client side code.
 
  ## Data Structures
  Data Structures are a specialized means of organizing and storing data in computers in such a way that we can perform operations on the stored data more efficiently. In this assignment we mainly have two data structure's namely group data structure and user data structure. In group data structure we have different fields of data like objid, id, group_name, members, channel,and channelname. The code snippet given below portrays the data structure's.
@@ -60,9 +60,9 @@ Routing refers to how an application’s endpoints (URIs) respond to client requ
 * deletegroup route delete's the group
 * deleteItem route delete's the item
 * deleteMember route delete's the member
-* getGroup route retrive/get the group
+* getGroup route retrieve/get the group
 * getuser route retrive/get the user
-* getusers route retrive/get users
+* getusers route retrieve/get users
 * groupvalid route validate the group
 * login route redirects to login
 * showChannel route show the channel
@@ -81,4 +81,4 @@ Route parameters are named URL segments that are used to capture the values spec
 
 ### Return Values
 
-json strings or array are the return value from these routes when parameters are passesd. Forexpample is objectid of any user is passed to the route then the requested detailed associated with that objectid will be retrieved in form of json string ore array and portrayed on the web.
+json strings or array are the return value from these routes when parameters are passed. Forexample is objectid of any user is passed to the route then the requested detailed associated with that objectid will be retrieved in form of json string ore array and portrayed on the web.
