@@ -8,19 +8,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  ## Data Structures
  Data Structures are a specialized means of organizing and storing data in computers in such a way that we can perform operations on the stored data more efficiently. In this assignment we mainly have two data structure's namely group data structure and user data structure. In group data structure we have different fields of data like objid, id, group_name, members, channel,and channelname. The code snippet given below portrays the data structure's.
 
- <img src="images/data_structure_group.JPG" height="200"width="200">
+ <img src="images/data_structure_group.JPG" width="200"> </br>
  <img src="images/data_structure_user.JPG" width="200">
  
 ## Angular Architecture
 
-# Services
+### Services
 
 For data or logic that isn't associated with a specific view, and that we want to share across components, we create a service class. A service class definition is immediately preceded by the @Injectable() decorator as shown in figure given below. The decorator provides the metadata that allows other providers to be injected as dependencies into our class.
 
-<img src="images/Services_files.JPG" width="200">
+<img src="images/Services_files.JPG" width="200"></br>
 <img src="images/group_services.JPG" width="200">
 
-# Models
+### Models
 
 <img src="images/model_angular.JPG" width="200">
 
@@ -28,9 +28,9 @@ This file(user.ts) is model file. <br/>
 
 where we created a very simple models for Users.
 
-<img src="images/model_angular2.JPG" width="200">
+<img src="images/model_angular2.JPG" width="200"></br>
 
-# Components
+### Components
 
 Components are the main building block for Angular applications. Each component consists of:
 
@@ -39,15 +39,16 @@ Components are the main building block for Angular applications. Each component 
 A CSS selector that defines how the component is used in a template
 * Optionally, CSS styles applied to the template
 
-<img src="images/component_files.JPG" width="200">
+<img src="images/component_files.JPG" width="200"></br>
 
 
 ## Rest API
 
-# Routes
+### Routes
 
 Routing refers to how an application’s endpoints (URIs) respond to client requests. 
-<img src="images/Routes.JPG" width="200">
+
+<img src="images/Routes.JPG" width="200"></br>
 
 * addChannelMember route adds channel members
 * addmember route adds member
@@ -70,7 +71,7 @@ Routing refers to how an application’s endpoints (URIs) respond to client requ
 * userdata route get the user data
 * uservalid route validate the user 
 
-# Parameters
+### Parameters
 
 Route parameters are named URL segments that are used to capture the values specified at their position in the URL. The captured values are populated in the req.params object, with the name of the route parameter specified in the path as their respective keys.
 
@@ -78,6 +79,6 @@ Route parameters are named URL segments that are used to capture the values spec
 
 <img src="images/Routes.JPG" width="200">
 
-# Return Values
+### Return Values
 
 json strings or array are the return value from these routes when parameters are passesd. Forexpample is objectid of any user is passed to the route then the requested detailed associated with that objectid will be retrieved in form of json string ore array and portrayed on the web.
