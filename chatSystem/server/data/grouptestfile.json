@@ -1,6 +1,6 @@
 [
   {
-    "groupname": "FirstGroup",
+    "groupname": "Group-1",
     "members": [
       "super"
     ],
@@ -10,7 +10,7 @@
     ],
     "channel": [
       {
-        "channelname": "myfirschannel",
+        "channelname": "channel_1",
         "channelmembers": [
           "super"
         ]
