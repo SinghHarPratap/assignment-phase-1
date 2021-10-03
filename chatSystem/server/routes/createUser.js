@@ -1,7 +1,6 @@
 module.exports = function(db, app) {
   app.post('/createUser', function(req, res) {
-    console.log("create usr API");
-    if (!req.body) {
+    if (!req.body.username || !req.body.pwd) {
       return res.sendStatus(400)
     }
     newUser = req.body
@@ -11,7 +10,6 @@ module.exports = function(db, app) {
     collection.find({ username: username }).count((err, count) => {
       if (count == 0) {
         //if no duplicate
-        console.log("abc===>",req.body)
         collection.insertOne(newUser, (err, dbres) => {
           if (err) throw err
           let num = dbres.insertedCount
