@@ -12,6 +12,7 @@ module.exports = {
       socket.on('message', message => {
         for (i = 0; i < socketRoom.length; i++) {
           if (socketRoom[i][0] == socket.id) {
+            console.log(message)
             chat.to(socketRoom[i][1]).emit('message', message)
           }
         }

@@ -9,10 +9,20 @@ import { HttpClient } from '@angular/common/http'
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
+
 export class ChatComponent implements OnInit {
+
+  images = [
+    'https://i.dlpng.com/static/png/6860651_preview.png',
+    'https://cdn-icons-png.flaticon.com/512/147/147144.png',
+    'https://e7.pngegg.com/pngimages/980/886/png-clipart-male-portrait-avatar-computer-icons-icon-design-avatar-flat-face-icon-people-head.png',
+    'https://gpihefp.com/wp-content/uploads/2021/05/male_boy_person_people_avatar_icon_159358.png',
+    'https://www.pngitem.com/pimgs/m/248-2483089_ubud-monkey-forest-flat-design-flat-icon-person.png',
+    'https://cdn.iconscout.com/icon/premium/png-256-thumb/black-man-2888342-2399431.png'
+  ]
   private socket
   messagecontent: string = ''
-  messages: string[] = []
+  messages: any[] = []
   rooms = []
   roomlist: string = ''
   roomnotice: string = ''
@@ -24,6 +34,8 @@ export class ChatComponent implements OnInit {
   groupList = []
   group: string = ''
   channelsList = []
+  randomImage = this.images[Math.floor(Math.random() * this.images.length)];
+
 
   constructor(
     private socketservice: SocketService,
@@ -115,7 +127,13 @@ export class ChatComponent implements OnInit {
 
   chat() {
     if (this.messagecontent) {
-      this.socketservice.sendMessage(this.messagecontent)
+      console.log(this.username);
+      const sendingItem = {
+        message: this.messagecontent,
+        username: this.username,
+        image: this.randomImage
+      }
+      this.socketservice.sendMessage(sendingItem)
       this.messagecontent = null
     } else {
       console.log('No Message')

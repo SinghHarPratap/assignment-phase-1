@@ -50,7 +50,7 @@ export class SocketService {
     this.socket.on('notice', res => next(res))
   }
 
-  sendMessage(message: string): void {
+  sendMessage(message: any): void {
     this.socket.emit('message', message)
   }
 

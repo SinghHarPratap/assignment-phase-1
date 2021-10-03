@@ -27,7 +27,7 @@
         <option *ngFor="let room of channelsList">{{ room }}</option>
       </select>
     </div>
-    
+
     <div class="new-room card" data-aos="fade-up">
       <label for="newroom">New Room</label>
       <input type="text" [(ngModel)]="newroom" name="newroom" id="newroom" class="form-control" />
@@ -43,7 +43,10 @@
     <div class="chat">
       <h6>Chat Messages for {{ currentroom }} - {{ numusers }} Active Users</h6>
       <ul>
-        <li *ngFor="let message of messages">{{ message }}</li>
+        <p *ngFor="let message of messages">
+          <img src={{message.image}}>
+          <span><b>{{(message.username)}}: </b></span>{{ message.message }}
+        </p>
       </ul>
     </div>
   </div>
