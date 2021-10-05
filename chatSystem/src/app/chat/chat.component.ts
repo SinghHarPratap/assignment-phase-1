@@ -90,7 +90,8 @@ export class ChatComponent implements OnInit {
 
   onSubmit(file: any) {
     const formData = new FormData();
-    formData.append('image', file);
+
+    formData.append('image', file, `${this.username}.png`);
 
     this.http.post<any>(this.SERVER_URL, formData).subscribe(
       (res) => {

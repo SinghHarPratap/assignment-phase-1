@@ -19,6 +19,9 @@ app.use(express.static(path.join(__dirname, '../dist/ChatroomAssignment/')))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+var dir = path.join(__dirname, 'upload');
+app.use("/uploads",express.static(dir));
+
 const url = 'mongodb://localhost:27017'
 MongoClient.connect(
   url,

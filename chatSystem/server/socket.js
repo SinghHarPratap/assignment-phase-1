@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 module.exports = {
   connect: function(app, io) {
     // console.log(io)
@@ -13,6 +16,15 @@ module.exports = {
         for (i = 0; i < socketRoom.length; i++) {
           if (socketRoom[i][0] == socket.id) {
             console.log(message)
+
+            const username = message.username;
+            const imagename = "avatar.png"; //username + ".png";
+            const imagePath = path.join(__dirname, "upload", imagename);
+            console.log(imagePath)
+            if(fs.existsSync(imagePath)) {
+              message.image = `http://localhost:3000/uploads/${imagename}`
+            }
+
             chat.to(socketRoom[i][1]).emit('message', message)
           }
         }

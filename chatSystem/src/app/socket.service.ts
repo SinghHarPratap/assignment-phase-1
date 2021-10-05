@@ -55,6 +55,9 @@ export class SocketService {
   }
 
   getMessage(next) {
-    this.socket.on('message', message => next(message))
+    this.socket.on('message', message => {
+      console.log(message)
+      next(message)
+    })
   }
 }
