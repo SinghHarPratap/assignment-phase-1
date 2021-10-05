@@ -17,7 +17,7 @@
         &nbsp;
         <button *ngIf="!isinRoom" (click)="joinroom()" class="btn btn-primary">Join</button> &nbsp;
         <button *ngIf="isinRoom" (click)="leaveroom()" class="btn btn-primary">Leave</button>
-        <input *ngIf="isinRoom" class="btn" type="file" name="profile" (change)="onFileSelect($event)" />
+        <input *ngIf="isinRoom" class="btn" type="file" accept="image/png" name="profile" (change)="onFileSelect($event)" />
       </div>
       <select [(ngModel)]="group" name="group" (change)="channellist()">
         <option [ngValue]="null">Select Group</option>
