@@ -5,9 +5,10 @@ const path = require("path");
 const imageStorage = multer.diskStorage({
   destination: "upload", // Destination to store image
   filename: (req, file, cb) => {
+    console.log(file)
     cb(
       null,
-      file.fieldname + path.extname(file.originalname)
+      file.originalname
     );
     // file.fieldname is name of the field (image), path.extname get the uploaded file extension
   },
