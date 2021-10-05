@@ -35,7 +35,7 @@ export class ChatComponent implements OnInit {
   group: string = ''
   channelsList = []
   randomImage = this.images[Math.floor(Math.random() * this.images.length)];
-
+  SERVER_URL = "http://localhost:3000/api/uploadImage";
 
   constructor(
     private socketservice: SocketService,
@@ -79,6 +79,29 @@ export class ChatComponent implements OnInit {
         this.isinRoom = false
       }
     })
+  }
+
+  onFileSelect(event) {
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.onSubmit(file)
+    }
+  }
+
+  onSubmit(file: any) {
+    const formData = new FormData();
+    formData.append('image', file);
+
+    this.http.post<any>(this.SERVER_URL, formData).subscribe(
+      (res) => {
+        alert("Profile Pic Updated Successfully")
+        console.log(res)
+      },
+      (err) => {
+        alert("Error in uploading")
+        console.log(err)
+      }
+    );
   }
 
   joinroom() {

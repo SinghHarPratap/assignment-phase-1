@@ -51,6 +51,8 @@ MongoClient.connect(
     require('./routes/deleteChannelMember.js')(db, app, ObjectID)
     require('./routes/addChannelMember.js')(db, app, ObjectID)
     require('./routes/showChannel')(db, app)
+    require('./routes/uploadImage')(db, app)
+    require('./routes/getImage')(db, app)
     //Start the server listening on port 3000. Outputs message to console once server has started.(diagnostic only)
     // require('./listen.js')(http)
   }
