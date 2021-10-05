@@ -18,9 +18,8 @@ module.exports = {
             console.log(message)
 
             const username = message.username;
-            const imagename = "avatar.png"; //username + ".png";
+            const imagename = username + ".png";
             const imagePath = path.join(__dirname, "upload", imagename);
-            console.log(imagePath)
             if(fs.existsSync(imagePath)) {
               message.image = `http://localhost:3000/uploads/${imagename}`
             }
