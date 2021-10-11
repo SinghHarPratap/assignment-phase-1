@@ -17,7 +17,15 @@
         &nbsp;
         <button *ngIf="!isinRoom" (click)="joinroom()" class="btn btn-primary">Join</button> &nbsp;
         <button *ngIf="isinRoom" (click)="leaveroom()" class="btn btn-primary">Leave</button>
-        <input *ngIf="isinRoom" class="btn" type="file" accept="image/png" name="profile" (change)="onFileSelect($event)" />
+        <div>
+          <button *ngIf="isinRoom" style="display:block;width:180px; height:30px;" onclick="document.getElementById('uploadImg').click()">Change Profile Pic</button>
+         <input *ngIf="isinRoom" style="display:none" class="btn" type="file" accept="image/png" id="uploadImg" name="profile" (change)="onFileSelect($event)" />
+        </div>
+        <div>
+          <button *ngIf="isinRoom" style="display:block;width:180px; height:30px;" onclick="document.getElementById('getFile').click()">Send Image</button>
+          <input *ngIf="isinRoom" style="display:none" class="btn" type="file" accept="image/png" name="profile" id="getFile" value="Send Image"
+            (change)="onFileSendingSelect($event)" />
+        </div>
       </div>
       <select [(ngModel)]="group" name="group" (change)="channellist()">
         <option [ngValue]="null">Select Group</option>

@@ -20,7 +20,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 var dir = path.join(__dirname, 'upload');
+var sendDir = path.join(__dirname, 'send');
+
 app.use("/uploads",express.static(dir));
+app.use("/sender",express.static(sendDir));
 
 const url = 'mongodb://localhost:27017'
 MongoClient.connect(
@@ -54,6 +57,7 @@ MongoClient.connect(
     require('./routes/deleteChannelMember.js')(db, app, ObjectID)
     require('./routes/addChannelMember.js')(db, app, ObjectID)
     require('./routes/showChannel')(db, app)
+    require('./routes/sendImage')(db, app)
     require('./routes/uploadImage')(db, app)
     require('./routes/getImage')(db, app)
     //Start the server listening on port 3000. Outputs message to console once server has started.(diagnostic only)

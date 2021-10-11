@@ -36,6 +36,7 @@ export class ChatComponent implements OnInit {
   channelsList = []
   randomImage = this.images[Math.floor(Math.random() * this.images.length)];
   SERVER_URL = "http://localhost:3000/api/uploadImage";
+  SEND_URL = "http://localhost:3000/api/sendImage";
 
   constructor(
     private socketservice: SocketService,
@@ -86,6 +87,30 @@ export class ChatComponent implements OnInit {
       const file = event.target.files[0];
       this.onSubmit(file)
     }
+  }
+
+  onFileSendingSelect(event) {
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.onSendSubmit(file)
+    }
+  }
+
+  onSendSubmit(file: any) {
+    const formData = new FormData();
+    // const fileName = this.username + "_" + Date.now() + '.png';
+    formData.append('image', file, `${this.username}.png`);
+
+    this.http.post<any>(this.SEND_URL, formData).subscribe(
+      (res) => {
+        alert("Profile Pic Updated Successfully")
+        console.log(res)
+      },
+      (err) => {
+        alert("Error in uploading")
+        console.log(err)
+      }
+    );
   }
 
   onSubmit(file: any) {
