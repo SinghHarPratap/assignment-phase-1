@@ -54,7 +54,16 @@
       <ul>
         <p *ngFor="let message of messages">
           <img src={{message.image}}>
-          <span><b>{{(message.username)}}: </b></span>{{ message.message }}
+          <span><b>{{(message.username)}}: </b></span>
+          <span>
+          <span *ngIf="message.message; else templateName">
+            {{ message.message }}
+          </span>
+
+        <ng-template #templateName>
+          <img src={{message.url}} id="sendImgg">
+        </ng-template>
+          </span>
         </p>
       </ul>
     </div>

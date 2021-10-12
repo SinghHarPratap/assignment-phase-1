@@ -54,8 +54,19 @@ export class SocketService {
     this.socket.emit('message', message)
   }
 
+  sendImgMessage(message: any): void {
+    this.socket.emit('imgMessage', message)
+  }
+
   getMessage(next) {
     this.socket.on('message', message => {
+      console.log(message)
+      next(message)
+    })
+  }
+
+  getImgMessage(next) {
+    this.socket.on('imgMessage', message => {
       console.log(message)
       next(message)
     })

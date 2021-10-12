@@ -29,6 +29,23 @@ module.exports = {
         }
       })
 
+      socket.on('imgMessage', message => {
+        for (i = 0; i < socketRoom.length; i++) {
+          if (socketRoom[i][0] == socket.id) {
+            console.log(message)
+
+            const username = message.username;
+            const imagename = username + ".png";
+            const imagePath = path.join(__dirname, "upload", imagename);
+            if(fs.existsSync(imagePath)) {
+              message.image = `http://localhost:3000/uploads/${imagename}`
+            }
+
+            chat.to(socketRoom[i][1]).emit('message', message)
+          }
+        }
+      })
+
       socket.on('newroom', newroom => {
         if (rooms.indexOf(newroom) == -1) {
           rooms.push(newroom)

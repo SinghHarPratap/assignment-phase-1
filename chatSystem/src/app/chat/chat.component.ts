@@ -103,8 +103,11 @@ export class ChatComponent implements OnInit {
 
     this.http.post<any>(this.SEND_URL, formData).subscribe(
       (res) => {
-        alert("Profile Pic Updated Successfully")
+        alert("File sent Successfully")
         console.log(res)
+        const url = `http://localhost:3000/sender/${res.filename}`
+        console.log(url, 'url')
+        this.sendImg(url)
       },
       (err) => {
         alert("Error in uploading")
@@ -172,6 +175,15 @@ export class ChatComponent implements OnInit {
     this.socketservice.createroom(this.newroom)
     this.socketservice.reqroomList()
     this.newroom = ''
+  }
+
+  sendImg(url: any) {
+      const sendingItem = {
+        url,
+        username: this.username,
+        image: this.randomImage
+      }
+      this.socketservice.sendImgMessage(sendingItem)
   }
 
   chat() {
